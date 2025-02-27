@@ -1,0 +1,48 @@
+.homeContainer {
+  background-image: url("../../assets/background.png");
+  background-size: cover;
+  background-position: center;
+  height: 700px;
+}
+
+.content {
+  text-align: center;
+  padding-top: 436px;
+  padding-bottom: 60px;
+  height: 100%;
+}
+
+.homeTitle {
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 1.2;
+  text-align: center;
+  color: #ffffff;
+  margin-bottom: 16px;
+}
+
+.homeText {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1.33333;
+  text-align: center;
+  color: #ffffff;
+  margin-bottom: 40px;
+}
+
+.homeBtn {
+  border-radius: 12px;
+  width: 276px;
+  height: 44px;
+  background: #3470ff;
+  transition: background 0.3s ease;
+
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.25;
+  color: #ffffff;
+}
+
+.homeBtn:hover {
+  background: #0b44cd;
+}
