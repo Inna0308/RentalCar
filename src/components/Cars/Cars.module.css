@@ -90,3 +90,9 @@
 .carsBtnLoadMore:hover {
   border: 1px solid #0b44cd;
 }
+
+.carsLoader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

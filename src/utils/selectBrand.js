@@ -7,6 +7,7 @@ export const customStylesBrand = {
     background: "#f7f7f7",
     border: "none",
     boxShadow: "none",
+    fontWeight: "500",
   }),
   menu: (base) => ({
     ...base,
@@ -55,6 +56,6 @@ export const customStylesBrand = {
   }),
   indicatorSeparator: (base) => ({
     ...base,
-    display: "none", // Прибирає рисочку, яка відділяє стрілочку від поля вводу
+    display: "none",
   }),
 };

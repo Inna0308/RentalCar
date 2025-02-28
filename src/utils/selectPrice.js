@@ -5,6 +5,9 @@ export const customStylesPrice = {
     width: "196px",
     height: "44px",
     background: "#f7f7f7",
+    border: "none",
+    boxShadow: "none",
+    fontWeight: "500",
   }),
   menu: (base) => ({
     ...base,
@@ -51,5 +54,9 @@ export const customStylesPrice = {
     fontSize: "16px",
     fontWeight: "500",
     lineHeight: "1.25",
+  }),
+  indicatorSeparator: (base) => ({
+    ...base,
+    display: "none",
   }),
 };

@@ -63,19 +63,34 @@
 }
 
 .filterBtn {
+  background: #3470ff;
+  color: #ffffff;
+  transition: background 0.3s ease;
+}
+
+.resetBtn {
+  background-color: transparent;
+  border: 1px solid #8e929a;
+  color: #101828;
+  transition: border 0.3s ease;
+}
+
+.resetBtn,
+.filterBtn {
   border-radius: 12px;
   padding: 12px 51px;
-  width: 156px;
   height: 44px;
-  background: #3470ff;
-  transition: background 0.3s ease;
+  width: 156px;
 
   font-weight: 600;
   font-size: 16px;
   line-height: 1.25;
-  color: #ffffff;
 }
 
 .filterBtn:hover {
   background: #0b44cd;
+}
+
+.resetBtn:hover {
+  border: 1px solid #101828;
 }
