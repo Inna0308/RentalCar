@@ -1,0 +1,86 @@
+.carContainer {
+  display: flex;
+  margin-top: 84px;
+}
+
+.carBloc1 {
+  margin-right: 72px;
+}
+
+.carImg {
+  border-radius: 19px;
+  min-width: 640px;
+  height: 512px;
+  object-fit: cover;
+}
+
+.carBloc2 {
+  flex: 1;
+}
+
+.carName {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1.33;
+  color: #101828;
+  margin-bottom: 8px;
+}
+
+.carSpan {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.carText {
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.25;
+  color: #101828;
+}
+
+.carPrice {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1.33;
+  color: #3470ff;
+  margin-bottom: 32px;
+}
+
+.carDesc {
+  margin-bottom: 68px;
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.25;
+  color: #101828;
+}
+
+.carTitleText {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.2;
+  color: #101828;
+  margin-bottom: 20px;
+}
+
+.carList {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 110px;
+}
+
+.carDetails {
+  display: flex;
+  align-items: center;
+}
+
+.carSvg {
+  margin-right: 8px;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+}

@@ -30,3 +30,12 @@ export const fetchCars = createAsyncThunk("cars/fetchAll", async (filters, thunk
     return thunkApi.rejectWithValue(error.message);
   }
 });
+
+export const fetchCarById = createAsyncThunk("cars/fetchById", async (id, thunkApi) => {
+  try {
+    const { data } = await carInstance.get(`/cars/${id}`);
+    return data;
+  } catch (error) {
+    return thunkApi.rejectWithValue(error.message);
+  }
+});

@@ -1,11 +1,14 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 
 import { selectCars, selectIsLoading } from "../../redux/car/selectors";
 
 import { fetchCars } from "../../redux/car/operations";
 
 import Loader from "../Loader/Loader";
+
+import { getCity, getCountry } from "../../utils/address";
 
 import styles from "./Cars.module.css";
 
@@ -19,22 +22,6 @@ const Cars = () => {
   useEffect(() => {
     dispatch(fetchCars());
   }, [dispatch]);
-
-  function getCity(address) {
-    const parts = address.split(",");
-
-    const city = parts[1].trim();
-
-    return city;
-  }
-
-  function getCountry(address) {
-    const parts = address.split(",");
-
-    const country = parts[2].trim();
-
-    return country;
-  }
 
   return (
     <>
@@ -63,9 +50,11 @@ const Cars = () => {
                   <span>{car.mileage} km</span>
                 </div>
               </div>
-              <button type="button" className={styles.carsBtn}>
-                Read more
-              </button>
+              <Link to={`/catalog/${car.id}`}>
+                <button type="button" className={styles.carsBtn}>
+                  Read more
+                </button>
+              </Link>
             </div>
           ))
         )}
