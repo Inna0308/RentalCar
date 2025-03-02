@@ -63,3 +63,42 @@
 .bookBtn:hover {
   background: #0b44cd;
 }
+
+.inputWrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.bookInput {
+  border-radius: 12px;
+  padding: 14px 20px;
+  width: 576px;
+  height: 48px;
+  background: #f7f7f7;
+  outline: none;
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.25;
+}
+
+.bookInput:focus {
+  border: 1px solid #0b44cd;
+}
+
+.bookTextarea {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.25;
+  border-radius: 12px;
+  padding: 12px 20px 56px 20px;
+  width: 576px;
+  max-height: 88px;
+  background: #f7f7f7;
+  border: none;
+  outline: none;
+  resize: none;
+  overflow: hidden;
+}
