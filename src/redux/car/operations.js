@@ -6,6 +6,8 @@ export const carInstance = axios.create({
   baseURL: "https://car-rental-api.goit.global/",
 });
 
+const removeCommas = (value) => value.replace(/,/g, "");
+
 export const fetchCarBrends = createAsyncThunk("brends/fetchAll", async (_, thunkApi) => {
   try {
     const { data } = await carInstance.get("/brands");
@@ -20,8 +22,8 @@ export const fetchCars = createAsyncThunk("cars/fetchAll", async (filters, thunk
     const params = {};
 
     if (filters.brand) params.brand = filters.brand;
-    if (filters.mileageFrom) params.minMileage = filters.mileageFrom;
-    if (filters.mileageTo) params.maxMileage = filters.mileageTo;
+    if (filters.mileageFrom) params.minMileage = removeCommas(filters.mileageFrom);
+    if (filters.mileageTo) params.maxMileage = removeCommas(filters.mileageTo);
 
     const { data } = await carInstance.get("/cars", { params });
 

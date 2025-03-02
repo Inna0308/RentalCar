@@ -29,7 +29,9 @@ const CarDetails = () => {
         <div className={styles.carContainer}>
           <div className={styles.carBloc1}>
             <img src={currentCar.img} alt={`${currentCar.brand} ${currentCar.model}`} className={styles.carImg} />
-            <FormRental />
+            <div className={styles.carForm}>
+              <FormRental />
+            </div>
           </div>
 
           <div className={styles.carBloc2}>

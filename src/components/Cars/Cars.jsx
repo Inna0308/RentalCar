@@ -17,8 +17,6 @@ const Cars = () => {
   const isLoading = useSelector(selectIsLoading);
   const cars = useSelector(selectCars);
 
-  console.log("isLoading:", isLoading);
-
   useEffect(() => {
     dispatch(fetchCars());
   }, [dispatch]);
@@ -36,11 +34,11 @@ const Cars = () => {
               <img src={car.img} alt={car.brand} className={styles.carImage} />
               <div className={styles.carDetails}>
                 <h3 className={styles.carsGeneral}>
-                  <span>{car.brand} </span>
-                  <span className={styles.carsSpanModel}>{car.model}</span>
-                  <span>, </span>
-                  <span>{car.year}</span>
-                  <span className={styles.carsSpanPrice}>{car.rentalPrice}$</span>
+                  <p>
+                    {car.brand}
+                    <span className={styles.carsSpanModel}> {car.model}</span>, {car.year}
+                  </p>
+                  <p className={styles.carsPrice}>{car.rentalPrice}$</p>
                 </h3>
                 <div className={styles.carsAdditionally}>
                   <span>{getCity(car.address)}</span>

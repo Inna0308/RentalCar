@@ -3,6 +3,15 @@
   margin-top: 84px;
 }
 
+.carForm {
+  border: 1px solid #dadde1;
+  border-radius: 10px;
+  padding: 32px;
+  width: 640px;
+  max-height: 488px;
+  background: #ffffff;
+}
+
 .carBloc1 {
   margin-right: 72px;
 }
@@ -12,6 +21,8 @@
   min-width: 640px;
   height: 512px;
   object-fit: cover;
+
+  margin-bottom: 40px;
 }
 
 .carBloc2 {
