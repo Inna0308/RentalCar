@@ -21,6 +21,11 @@
   margin-bottom: 16px;
 }
 
+.carDetails {
+  max-height: 68px;
+  margin-bottom: 28px;
+}
+
 .carsGeneral {
   display: flex;
   align-items: center;
@@ -45,7 +50,6 @@
   font-size: 12px;
   line-height: 1.33333;
   color: #8d929a;
-  margin-bottom: 28px;
   height: 40px;
 }
 
@@ -70,10 +74,4 @@
 
 .carsBtn:hover {
   background: #0b44cd;
-}
-
-.carsLoader {
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }

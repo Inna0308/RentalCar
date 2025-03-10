@@ -17,7 +17,7 @@ export const fetchCarBrends = createAsyncThunk("brends/fetchAll", async (_, thun
   }
 });
 
-export const fetchCars = createAsyncThunk("cars/fetchAll", async (filters, thunkApi) => {
+export const fetchCars = createAsyncThunk("cars/fetchAll", async ({ filters, page }, thunkApi) => {
   try {
     const params = {};
 
@@ -25,7 +25,7 @@ export const fetchCars = createAsyncThunk("cars/fetchAll", async (filters, thunk
     if (filters.mileageFrom) params.minMileage = removeCommas(filters.mileageFrom);
     if (filters.mileageTo) params.maxMileage = removeCommas(filters.mileageTo);
 
-    const { data } = await carInstance.get("/cars", { params });
+    const { data } = await carInstance.get("/cars", { params: { ...filters, page } });
 
     return data.cars;
   } catch (error) {

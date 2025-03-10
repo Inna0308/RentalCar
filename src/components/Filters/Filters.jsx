@@ -6,7 +6,7 @@ import { fetchCarBrends, fetchCars } from "../../redux/car/operations";
 
 import { setFilter } from "../../redux/filters/slice.js";
 
-import { selectBrands } from "../../redux/car/selectors";
+import { selectBrands, selectPage } from "../../redux/car/selectors";
 import { selectFilter, selectMileageFrom, selectMileageTo } from "../../redux/filters/selectors.js";
 
 import { customStylesBrand } from "../../utils/selectBrand.js";
@@ -24,9 +24,11 @@ const Filters = () => {
   const filter = useSelector(selectFilter);
   const mileageFrom = useSelector(selectMileageFrom);
   const mileageTo = useSelector(selectMileageTo);
+  const page = useSelector(selectPage);
 
   const handleSearch = () => {
-    dispatch(fetchCars(filter));
+    const searchValue = { filters: filter, page };
+    dispatch(fetchCars(searchValue));
   };
 
   const handleMileageFromChange = (e) => {
