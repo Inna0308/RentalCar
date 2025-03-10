@@ -1,0 +1,20 @@
+.carsBtnLoadMore {
+  display: block;
+  margin: 0 auto;
+  border: 1px solid #3470ff;
+  transition: border 0.3s ease;
+  border-radius: 12px;
+  width: 156px;
+  height: 44px;
+
+  margin-bottom: 124px;
+
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.25;
+  color: #101828;
+}
+
+.carsBtnLoadMore:hover {
+  border: 1px solid #0b44cd;
+}

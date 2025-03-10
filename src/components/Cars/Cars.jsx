@@ -11,6 +11,7 @@ import Loader from "../Loader/Loader";
 import { getCity, getCountry } from "../../utils/address";
 
 import styles from "./Cars.module.css";
+import LoadMore from "../LoadMore/LoadMore";
 
 const Cars = () => {
   const dispatch = useDispatch();
@@ -57,11 +58,7 @@ const Cars = () => {
           ))
         )}
       </div>
-      {!isLoading && (
-        <button type="button" className={styles.carsBtnLoadMore}>
-          Load More
-        </button>
-      )}
+      {!isLoading && <LoadMore />}
     </>
   );
 };
